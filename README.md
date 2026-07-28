@@ -182,7 +182,7 @@ Before testing, it is recommended to:
 
 ### Planned
 
-- [ ] Heart
+- [X] Heart
 - [ ] Star
 - [ ] Lissajous Curve
 - [ ] Rose Curve

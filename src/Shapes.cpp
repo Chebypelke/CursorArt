@@ -92,3 +92,22 @@ void CursorArt::cosWave(int max_position) // ConWave is a full copy of SinWave (
     moveMouseTo(newX, newY);
     angle += ANGLE_STEP;
 }
+
+void CursorArt::heart(float scale)
+{
+    if (angle >= TWO_PI) 
+    {  
+        angle -= TWO_PI;
+    }
+
+    const auto newX = scale * 16 * pow(sin(angle), 3);
+    const auto newY = scale * (
+        13 * cos(angle) - 
+        5 * cos(2 * angle) - 
+        2 * cos(3 * angle) - 
+        cos(4 * angle)
+    );
+
+    moveMouseTo(newX, -newY);
+    angle += ANGLE_STEP;
+}
