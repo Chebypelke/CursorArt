@@ -1,5 +1,10 @@
 # 🎨 CursorArt
 
+![License](https://img.shields.io/github/license/Chebypelke/CursorArt)
+![C++](https://img.shields.io/badge/C%2B%2B-17-blue)
+![PlatformIO](https://img.shields.io/badge/PlatformIO-Compatible-orange)
+![Stars](https://img.shields.io/github/stars/Chebypelke/CursorArt)
+
 🇺🇸 English | [🇷🇺 Русский](README_ru.md)
 
 **CursorArt** is a lightweight C++ library for USB HID-capable Arduino boards that lets you move the mouse cursor along mathematical paths.

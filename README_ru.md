@@ -1,5 +1,10 @@
 # 🎨 CursorArt
 
+![License](https://img.shields.io/github/license/Chebypelke/CursorArt)
+![C++](https://img.shields.io/badge/C%2B%2B-17-blue)
+![PlatformIO](https://img.shields.io/badge/PlatformIO-Compatible-orange)
+![Stars](https://img.shields.io/github/stars/Chebypelke/CursorArt)
+
 🇷🇺 Русский | [🇺🇸 English](README.md)
 
 **CursorArt** — библиотека на C++ для Arduino-плат с поддержкой USB HID, позволяющая управлять курсором мыши и рисовать математические траектории.
