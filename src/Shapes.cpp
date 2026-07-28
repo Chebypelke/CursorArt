@@ -27,7 +27,7 @@ void CursorArt::ellipse(int x, int y)
     angle += ANGLE_STEP;
 }
 
-void CursorArt::spiral(int scale, int turns)
+void CursorArt::spiral(float scale, int turns)
 {
     const auto maxAngle = turns * TWO_PI;
 
@@ -109,5 +109,20 @@ void CursorArt::heart(float scale)
     );
 
     moveMouseTo(newX, -newY);
+    angle += ANGLE_STEP;
+}
+
+void CursorArt::roseCurve(float scale, int petals)
+{
+    if (angle >= TWO_PI) 
+    {  
+        angle -= TWO_PI;
+    }
+
+    const auto radius = scale * cos(petals * angle);
+    const auto newX = radius * cos(angle);
+    const auto newY = radius * sin(angle);
+
+    moveMouseTo(newX, newY);
     angle += ANGLE_STEP;
 }
