@@ -52,7 +52,7 @@ or place the library inside the `lib` directory of your PlatformIO project.
 
 ---
 
-## 📚 [API](docs/en/API.md)
+### 📚 [API](docs/en/API.md)
 
 ---
 

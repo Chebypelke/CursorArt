@@ -52,7 +52,7 @@ git clone https://github.com/Chebypelke/CursorArt.git
 
 ---
 
-## 📚 [API](docs/ru/API.md)
+### 📚 [API](docs/ru/API.md)
 
 ---
 

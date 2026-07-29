@@ -1,4 +1,4 @@
-# CursorArt - API docs
+# CursorArt - API Documentation
 
 🏠 Назад к [README](../../README_ru.md)
 
