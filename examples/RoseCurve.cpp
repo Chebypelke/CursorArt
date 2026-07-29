@@ -3,12 +3,12 @@
 #include <Mouse.h>
 
 void setup() {
-    delay(5000); 
+    delay(5000);
     Mouse.begin();
 }
 
 void loop() {
-    CursorArt::spiral(1, 25);
+    CursorArt::roseCurve(100.0f, 5);
 
     delay(10);
 }

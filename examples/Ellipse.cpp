@@ -13,4 +13,3 @@ void loop() {
     CursorArt::ellipse(250, 150); // Ellipse
     delay(10);
 }
-

@@ -6,6 +6,17 @@
 
 ---
 
+## 📑 Содержание
+
+- [Эллипс](#эллипс)
+- [Спираль](#спираль)
+- [Синусоида](#синусоида)
+- [Косинусоида](#косинусоида)
+- [Сердце](#сердце)
+- [Кривая Розы (Rose Curve)](#кривая-розы-rose-curve)
+
+---
+
 ## 📚 Доступные функции
 
 ### Эллипс
@@ -26,6 +37,10 @@ CursorArt::ellipse(width, height);
 CursorArt::ellipse(150, 75);
 ```
 
+📄 **Полный пример:** [`examples/Ellipse.cpp`](../../examples/Ellipse.cpp)
+
+> **Примечание:** Чтобы нарисовать идеальный круг, используйте одинаковые значения для `width` и `height`.
+
 ---
 
 ### Спираль
@@ -45,6 +60,8 @@ CursorArt::spiral(scale, turns);
 CursorArt::spiral(2, 15);
 ```
 
+📄 **Полный пример:** [`examples/Spiral.cpp`](../../examples/Spiral.cpp)
+
 ---
 
 ### Синусоида
@@ -63,6 +80,8 @@ CursorArt::sinWave(maxPosition);
 CursorArt::sinWave(500);
 ```
 
+📄 **Полный пример:** [`examples/SinWave.cpp`](../../examples/SinWave.cpp)
+
 ---
 
 ### Косинусоида
@@ -80,5 +99,50 @@ CursorArt::cosWave(maxPosition);
 ```cpp
 CursorArt::cosWave(500);
 ```
+
+📄 **Полный пример:** [`examples/CosWave.cpp`](../../examples/CosWave.cpp)
+
+---
+
+### Сердце
+
+```cpp
+CursorArt::heart(scale);
+```
+
+| Параметр | Тип | Описание |
+|----------|-----|----------|
+| `scale` | `float` | Определяет размер сердца |
+
+Пример:
+
+```cpp
+CursorArt::heart(5.0f);
+```
+
+📄 **Полный пример:** [`examples/Heart.cpp`](../../examples/Heart.cpp)
+
+---
+
+### Кривая Розы (Rose Curve)
+
+```cpp
+CursorArt::roseCurve(scale, petals);
+```
+
+| Параметр | Тип | Описание |
+|----------|-----|----------|
+| `scale` | `float` | Определяет размер розы |
+| `petals` | `int` | Определяет количество лепестков розы |
+
+Пример:
+
+```cpp
+CursorArt::roseCurve(100.0f, 5);
+```
+
+📄 **Полный пример:** [`examples/RoseCurve.cpp`](../../examples/RoseCurve.cpp)
+
+> **Примечание:** Если `petals` нечётное, количество лепестков равно `petals`. Если `petals` чётное, получится `2 × petals` лепестков.
 
 ---
