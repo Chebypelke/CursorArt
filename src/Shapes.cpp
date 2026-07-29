@@ -13,15 +13,15 @@ float oldMouseX = 0.0f;
 float oldMouseY = 0.0f;
 int positionX = 0;
 
-void CursorArt::ellipse(int x, int y)
+void ellipse(int width, int height)
 {
     if (angle >= TWO_PI) 
     {  
         angle -= TWO_PI;
     }
 
-    const auto newX = x * cos(angle);
-    const auto newY = y * sin(angle);
+    const auto newX = width * cos(angle);
+    const auto newY = height * sin(angle);
     
     moveMouseTo(newX, newY);
     angle += ANGLE_STEP;
