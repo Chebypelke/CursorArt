@@ -1,5 +1,9 @@
 # CursorArt - API docs
 
+🏠 Back to [README](../../README.md)
+
+🇷🇺 [Русский](../ru/API.md) | 🇺🇸 English
+
 ---
 
 ## 📚 Доступные функции

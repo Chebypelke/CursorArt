@@ -1,5 +1,9 @@
 # CursorArt - API Documentation
 
+🏠 Назад к [README](../../README_ru.md)
+
+🇷🇺 Русский | [🇺🇸 English](../en/API.md)
+
 ---
 
 ## 📚 Available Functions
