@@ -45,90 +45,14 @@ Supported boards include:
 Clone the repository:
 
 ```bash
-git clone https://github.com/USERNAME/CursorArt.git
+git clone https://github.com/Chebypelke/CursorArt.git
 ```
 
 or place the library inside the `lib` directory of your PlatformIO project.
 
 ---
 
-## 📖 Usage
-
-```cpp
-#include <Arduino.h>
-#include <Mouse.h>
-#include <CursorArt.hpp>
-
-void setup()
-{
-    delay(5000); // Gives you time to take your hands off the mouse
-    Mouse.begin();
-}
-
-void loop()
-{
-    CursorArt::cosWave(500);
-    delay(10);
-}
-```
-
----
-
-## 📚 API
-
-### Ellipse
-
-```cpp
-CursorArt::ellipse(width, height);
-```
-
-Example:
-
-```cpp
-CursorArt::ellipse(150, 75);
-```
-
----
-
-### Spiral
-
-```cpp
-CursorArt::spiral(scale, turns);
-```
-
-Example:
-
-```cpp
-CursorArt::spiral(2, 15);
-```
-
----
-
-### Sine Wave
-
-```cpp
-CursorArt::sinWave(maxPosition);
-```
-
-Example:
-
-```cpp
-CursorArt::sinWave(500);
-```
-
----
-
-### Cosine Wave
-
-```cpp
-CursorArt::cosWave(maxPosition);
-```
-
-Example:
-
-```cpp
-CursorArt::cosWave(500);
-```
+## 📚 [API](docs/en/API.md)
 
 ---
 
@@ -185,7 +109,7 @@ Before testing, it is recommended to:
 - [X] Heart
 - [ ] Star
 - [ ] Lissajous Curve
-- [ ] Rose Curve
+- [X] Rose Curve
 - [ ] Lemniscate of Bernoulli
 - [ ] Custom trajectories
 - [ ] Bézier curves

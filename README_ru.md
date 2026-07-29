@@ -45,90 +45,14 @@
 Склонируйте проект:
 
 ```bash
-git clone https://github.com/USERNAME/CursorArt.git
+git clone https://github.com/Chebypelke/CursorArt.git
 ```
 
 или поместите библиотеку в папку `lib` вашего проекта PlatformIO.
 
 ---
 
-## 📖 Использование
-
-```cpp
-#include <Arduino.h>
-#include <Mouse.h>
-#include <CursorArt.hpp>
-
-void setup()
-{
-    delay(5000); // время убрать руки с мыши
-    Mouse.begin();
-}
-
-void loop()
-{
-    CursorArt::cosWave(500);
-    delay(10);
-}
-```
-
----
-
-## 📚 Доступные функции
-
-### Эллипс
-
-```cpp
-CursorArt::ellipse(width, height);
-```
-
-Пример:
-
-```cpp
-CursorArt::ellipse(150, 75);
-```
-
----
-
-### Спираль
-
-```cpp
-CursorArt::spiral(scale, turns);
-```
-
-Пример:
-
-```cpp
-CursorArt::spiral(2, 15);
-```
-
----
-
-### Синусоида
-
-```cpp
-CursorArt::sinWave(maxPosition);
-```
-
-Пример:
-
-```cpp
-CursorArt::sinWave(500);
-```
-
----
-
-### Косинусоида
-
-```cpp
-CursorArt::cosWave(maxPosition);
-```
-
-Пример:
-
-```cpp
-CursorArt::cosWave(500);
-```
+## 📚 [API](docs/ru/API.md)
 
 ---
 
@@ -185,7 +109,7 @@ CursorArt/
 - [x] Сердце
 - [ ] Звезда
 - [ ] Кривая Лиссажу
-- [ ] Роза
+- [X] Роза
 - [ ] Лемниската Бернулли
 - [ ] Пользовательские траектории
 - [ ] Bezier-кривые
