@@ -1,8 +1,8 @@
 # CursorArt - API docs
 
-🏠 Back to [README](../../README.md)
+🏠 Назад к [README](../../README_ru.md)
 
-🇷🇺 [Русский](../ru/API.md) | 🇺🇸 English
+🇷🇺 Русский | [🇺🇸 English](../en/API.md)
 
 ---
 
