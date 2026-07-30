@@ -64,9 +64,9 @@ CursorArt/
 │   └── CursorArt.hpp
 ├── lib/
 ├── src/
-│   ├── CursorArt.cpp
-│   ├── MouseDraw.cpp
-│   └── MouseDraw.hpp
+│   ├── main.cpp
+│   ├── Utils.cpp
+│   └── Utils.hpp
 ├── examples/
 └── platformio.ini
 ```

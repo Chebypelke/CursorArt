@@ -1,5 +1,5 @@
 #include "CursorArt.hpp"
-#include "MouseDraw.hpp"
+#include "Utils.hpp"
 #include <Arduino.h>
 
 constexpr float ANGLE_STEP = 0.1f;
