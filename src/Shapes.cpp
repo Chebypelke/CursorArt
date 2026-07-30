@@ -13,7 +13,7 @@ float oldMouseX = 0.0f;
 float oldMouseY = 0.0f;
 int positionX = 0;
 
-void ellipse(int width, int height)
+void CursorArt::ellipse(int width, int height)
 {
     if (angle >= TWO_PI) 
     {  
