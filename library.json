@@ -1,0 +1,30 @@
+{
+  "name": "CursorArt",
+  "version": "1.0.0",
+  "description": "CursorArt is a lightweight C++ library for drawing mathematical cursor trajectories on USB HID capable Arduino boards.",
+  "keywords": [
+    "arduino",
+    "hid",
+    "usb",
+    "mouse",
+    "cursor",
+    "trajectory",
+    "geometry"
+  ],
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/Chebypelke/CursorArt.git"
+  },
+  "authors":
+  [
+    {
+      "name": "Chebypela",
+      "maintainer": true
+    }
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Chebypelke/CursorArt",
+  "frameworks": "arduino",
+  "platforms": "*"
+}
