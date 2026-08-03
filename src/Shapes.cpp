@@ -1,5 +1,6 @@
 #include "CursorArt.hpp"
 #include "Utils.hpp"
+#include "MathUtils.hpp"
 #include <Arduino.h>
 
 constexpr float ANGLE_STEP = 0.1f;
@@ -9,19 +10,14 @@ constexpr int RIGHT = 1;
 constexpr int LEFT = -1;
 float angle = 0.0f;
 int direction = RIGHT;
-float oldMouseX = 0.0f;
-float oldMouseY = 0.0f;
 int positionX = 0;
 
 void CursorArt::ellipse(int width, int height)
 {
-    if (angle >= TWO_PI) 
-    {  
-        angle -= TWO_PI;
-    }
+    angleNormalize(angle, TWO_PI);
 
-    const auto newX = width * cos(angle);
-    const auto newY = height * sin(angle);
+    const auto newX = width * Math::cosFloat(angle); 
+    const auto newY = height * Math::sinFloat(angle);
     
     moveMouseTo(newX, newY);
     angle += ANGLE_STEP;
@@ -31,13 +27,10 @@ void CursorArt::spiral(float scale, int turns)
 {
     const auto maxAngle = turns * TWO_PI;
 
-    if (angle >= maxAngle)
-    {
-        angle -= maxAngle;
-    }
+    angleNormalize(angle, maxAngle);
 
-    const auto newX = scale * angle * cos(angle);
-    const auto newY = scale * angle * sin(angle);
+    const auto newX = scale * angle * Math::cosFloat(angle);
+    const auto newY = scale * angle * Math::sinFloat(angle);
 
     moveMouseTo(newX, newY);
     angle += ANGLE_STEP;
@@ -45,10 +38,7 @@ void CursorArt::spiral(float scale, int turns)
 
 void CursorArt::sinWave(int max_position)
 {
-    if (angle >= TWO_PI) 
-    {  
-        angle -= TWO_PI;
-    }
+    angleNormalize(angle, TWO_PI);
 
     positionX += direction * BASE_SPEED;
 
@@ -62,7 +52,7 @@ void CursorArt::sinWave(int max_position)
     }
 
     const auto newX = positionX;
-    const auto newY = AMPLITUDE * sin(angle);
+    const auto newY = AMPLITUDE * Math::sinFloat(angle);
 
     moveMouseTo(newX, newY);
     angle += ANGLE_STEP;
@@ -70,10 +60,7 @@ void CursorArt::sinWave(int max_position)
 
 void CursorArt::cosWave(int max_position) // ConWave is a full copy of SinWave (difference in a single line), maybe I'll fix it.
 {
-    if (angle >= TWO_PI) 
-    {  
-        angle -= TWO_PI;
-    }
+    angleNormalize(angle, TWO_PI); 
 
     positionX += direction * BASE_SPEED;
 
@@ -87,7 +74,7 @@ void CursorArt::cosWave(int max_position) // ConWave is a full copy of SinWave (
     }
 
     const auto newX = positionX;
-    const auto newY = AMPLITUDE * cos(angle);
+    const auto newY = AMPLITUDE * Math::cosFloat(angle);
 
     moveMouseTo(newX, newY);
     angle += ANGLE_STEP;
@@ -95,17 +82,14 @@ void CursorArt::cosWave(int max_position) // ConWave is a full copy of SinWave (
 
 void CursorArt::heart(float scale)
 {
-    if (angle >= TWO_PI) 
-    {  
-        angle -= TWO_PI;
-    }
+    angleNormalize(angle, TWO_PI);
 
-    const auto newX = scale * 16 * pow(sin(angle), 3);
+    const auto newX = scale * 16 * Math::cube(Math::sinFloat(angle));
     const auto newY = scale * (
-        13 * cos(angle) - 
-        5 * cos(2 * angle) - 
-        2 * cos(3 * angle) - 
-        cos(4 * angle)
+        13 * Math::cosFloat(angle) - 
+        5 * Math::cosFloat(2 * angle) - 
+        2 * Math::cosFloat(3 * angle) - 
+        Math::cosFloat(4 * angle)
     );
 
     moveMouseTo(newX, -newY);
@@ -114,14 +98,11 @@ void CursorArt::heart(float scale)
 
 void CursorArt::roseCurve(float scale, int petals)
 {
-    if (angle >= TWO_PI) 
-    {  
-        angle -= TWO_PI;
-    }
+    angleNormalize(angle, TWO_PI);
 
-    const auto radius = scale * cos(petals * angle);
-    const auto newX = radius * cos(angle);
-    const auto newY = radius * sin(angle);
+    const auto radius = scale * Math::cosFloat(petals * angle);
+    const auto newX = radius * Math::cosFloat(angle);
+    const auto newY = radius * Math::sinFloat(angle);
 
     moveMouseTo(newX, newY);
     angle += ANGLE_STEP;

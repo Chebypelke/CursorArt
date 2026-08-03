@@ -7,7 +7,7 @@ namespace
     float oldMouseY = 0.0f;
 }
 
-void moveMouseTo(int newX, int newY)
+void moveMouseTo(float newX, float newY)
 {
     const auto moveX = static_cast<int>(newX - oldMouseX);
     const auto moveY = static_cast<int>(newY - oldMouseY);
@@ -15,4 +15,12 @@ void moveMouseTo(int newX, int newY)
     Mouse.move(moveX, moveY);
     oldMouseX = newX;
     oldMouseY = newY;
+}
+
+void angleNormalize(float& angle, float max_angle)
+{
+    while (angle >= max_angle)
+    {
+        angle -= max_angle;
+    }
 }

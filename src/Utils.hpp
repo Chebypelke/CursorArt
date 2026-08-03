@@ -1,3 +1,4 @@
 #pragma once
 
-void moveMouseTo(int newX, int newY);
+void moveMouseTo(float newX, float newY);
+void angleNormalize(float& angle, float max_angle);
