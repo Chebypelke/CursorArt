@@ -23,6 +23,9 @@
       "maintainer": true
     }
   ],
+  "dependencies": {
+    "arduino-libraries/Mouse": "~1.0.1"
+  },
   "license": "MIT",
   "homepage": "https://github.com/Chebypelke/CursorArt",
   "frameworks": "arduino",
