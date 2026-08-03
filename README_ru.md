@@ -1,27 +1,23 @@
 # 🎨 CursorArt
 
 ![License](https://img.shields.io/github/license/Chebypelke/CursorArt)
-![C++](https://img.shields.io/badge/C%2B%2B-17-blue)
+![C++](https://img.shields.io/badge/C%2B%2B-11%2B-blue)
 ![PlatformIO](https://img.shields.io/badge/PlatformIO-Compatible-orange)
 ![Stars](https://img.shields.io/github/stars/Chebypelke/CursorArt)
 
 🇷🇺 Русский | [🇺🇸 English](README.md)
 
-**CursorArt** — библиотека на C++ для Arduino-плат с поддержкой USB HID, позволяющая управлять курсором мыши и рисовать математические траектории.
+**CursorArt** — библиотека на C++ для Arduino-платформ с поддержкой USB HID, позволяющая управлять курсором мыши и рисовать математические траектории.
 
-Библиотека предоставляет простой API для рисования фигур и волн движением курсора.
+Библиотека предоставляет простой API для рисования математических траекторий движением курсора.
 
 ---
 
 ## ✨ Возможности
 
 - 🖱️ Управление курсором через USB HID
-- ⭕ Рисование эллипсов
-- 🌀 Рисование спиралей
-- 🌊 Синусоидальные траектории
-- 🌊 Косинусоидальные траектории
+- 📐 Создание математических траекторий
 - ⚡ Простой и понятный API
-- 🧩 Простое добавление новых фигур
 
 ---
 
@@ -34,7 +30,7 @@
 - Arduino Leonardo
 - Arduino Micro
 - SparkFun Pro Micro
-- Любые платы на базе ATmega32U4
+- Любые платы на базе `ATmega32U4` с аппаратной поддержкой USB HID
 
 > Обычный Arduino Uno не поддерживается.
 
@@ -42,34 +38,28 @@
 
 ## 🚀 Установка
 
+### Способ 1:
+
+Добавьте библиотеку в `platformio.ini`
+
+```ini
+lib_deps =
+    Chebypelke/CursorArt
+```
+
+### Способ 2:
+
 Склонируйте проект:
 
 ```bash
 git clone https://github.com/Chebypelke/CursorArt.git
 ```
 
-или поместите библиотеку в папку `lib` вашего проекта PlatformIO.
+или поместите библиотеку в папку `lib` вашего проекта `PlatformIO`.
 
 ---
 
 ### 📚 [API](docs/ru/API.md)
-
----
-
-## 📂 Структура проекта
-
-```
-CursorArt/
-├── include/
-    └── CursorArt.hpp
-├── lib/
-├── src/
-│   ├── main.cpp
-│   ├── Utils.cpp
-│   └── Utils.hpp
-├── examples/
-└── platformio.ini
-```
 
 ---
 
@@ -87,7 +77,7 @@ CursorArt/
 
 ## 🛠️ Используемые технологии
 
-- C++17
+- C++ 11+
 - PlatformIO
 - Arduino Framework
 - USB HID
@@ -103,16 +93,16 @@ CursorArt/
 - [x] Спираль
 - [x] Синусоида
 - [x] Косинусоида
+- [x] Сердце
+- [x] Роза
 
 ### Планируется
 
-- [x] Сердце
 - [ ] Звезда
 - [ ] Кривая Лиссажу
-- [X] Роза
 - [ ] Лемниската Бернулли
 - [ ] Пользовательские траектории
-- [ ] Bezier-кривые
+- [ ] Кривые Безье
 
 ---
 

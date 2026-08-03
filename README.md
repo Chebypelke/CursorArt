@@ -1,46 +1,53 @@
 # 🎨 CursorArt
 
 ![License](https://img.shields.io/github/license/Chebypelke/CursorArt)
-![C++](https://img.shields.io/badge/C%2B%2B-17-blue)
+![C++](https://img.shields.io/badge/C%2B%2B-11%2B-blue)
 ![PlatformIO](https://img.shields.io/badge/PlatformIO-Compatible-orange)
 ![Stars](https://img.shields.io/github/stars/Chebypelke/CursorArt)
 
-🇺🇸 English | [🇷🇺 Русский](README_ru.md)
+[🇷🇺 Русский](README_ru.md) | 🇺🇸 English
 
-**CursorArt** is a lightweight C++ library for USB HID-capable Arduino boards that lets you move the mouse cursor along mathematical paths.
+**CursorArt** is a C++ library for USB HID-capable Arduino platforms that allows you to control the mouse cursor and draw mathematical trajectories.
 
-It provides a simple and clean API for drawing shapes and wave patterns using cursor movement.
+The library provides a simple API for creating mathematical trajectories using cursor movement.
 
 ---
 
 ## ✨ Features
 
-- 🖱️ Control the mouse cursor via USB HID
-- ⭕ Draw ellipses
-- 🌀 Draw spirals
-- 🌊 Generate sine wave paths
-- 🌊 Generate cosine wave paths
-- ⚡ Clean and easy-to-use API
-- 🧩 Easily extensible with custom shapes
+- 🖱️ Mouse control via USB HID
+- 📐 Mathematical trajectory generation
+- ⚡ Simple and easy-to-use API
 
 ---
 
 ## 📦 Supported Boards
 
-CursorArt only works with Arduino boards that support native USB HID.
+The library works only with boards that support USB HID.
 
-Supported boards include:
+Supported boards:
 
 - Arduino Leonardo
 - Arduino Micro
 - SparkFun Pro Micro
-- Any ATmega32U4-based board
+- Any board based on `ATmega32U4` with hardware USB HID support
 
-> **Note:** Standard Arduino Uno and Nano boards are **not supported** because they do not provide native USB HID functionality.
+> Arduino Uno is not supported.
 
 ---
 
 ## 🚀 Installation
+
+### Method 1:
+
+Add the library to your `platformio.ini`:
+
+```ini
+lib_deps =
+    Chebypelke/CursorArt
+```
+
+### Method 2:
 
 Clone the repository:
 
@@ -48,46 +55,29 @@ Clone the repository:
 git clone https://github.com/Chebypelke/CursorArt.git
 ```
 
-or place the library inside the `lib` directory of your PlatformIO project.
+or place the library into the `lib` folder of your PlatformIO project.
 
 ---
 
-### 📚 [API](docs/en/API.md)
-
----
-
-## 📂 Project Structure
-
-```text
-CursorArt/
-├── include/
-│   └── CursorArt.hpp
-├── lib/
-├── src/
-│   ├── main.cpp
-│   ├── Utils.cpp
-│   └── Utils.hpp
-├── examples/
-└── platformio.ini
-```
+### 📚 [API](docs/API.md)
 
 ---
 
 ## ⚠️ Important
 
-While running, CursorArt takes full control of your mouse cursor.
+During operation, the library has full control over the mouse cursor.
 
-Before testing, it is recommended to:
+Recommended:
 
-- add a short delay in `setup()`;
-- make sure you can quickly disconnect the board if needed;
-- perform initial testing on a secondary computer or a virtual machine whenever possible.
+- Add a small delay in `setup()`;
+- Have a way to quickly disconnect the device;
+- Test first in a virtual machine or on a secondary computer.
 
 ---
 
-## 🛠️ Built With
+## 🛠️ Technologies Used
 
-- C++17
+- C++ 11+
 - PlatformIO
 - Arduino Framework
 - USB HID
@@ -101,37 +91,37 @@ Before testing, it is recommended to:
 
 - [x] Ellipse
 - [x] Spiral
-- [x] Sine Wave
-- [x] Cosine Wave
+- [x] Sine wave
+- [x] Cosine wave
+- [x] Heart
+- [x] Rose
 
 ### Planned
 
-- [X] Heart
 - [ ] Star
-- [ ] Lissajous Curve
-- [X] Rose Curve
-- [ ] Lemniscate of Bernoulli
+- [ ] Lissajous curve
+- [ ] Bernoulli lemniscate
 - [ ] Custom trajectories
-- [ ] Bézier curves
+- [ ] Bezier curves
 
 ---
 
 ## 🤝 Contributing
 
-Pull requests, suggestions, and feature ideas are always welcome.
+Pull Requests and suggestions are welcome.
 
-Found a bug or have an idea for a new shape? Feel free to open an Issue.
+If you find a bug or want to suggest a new shape, create an Issue.
 
 ---
 
 ## 📄 License
 
-Released under the MIT License.
+MIT License.
 
 ---
 
 <div align="center">
 
-**CursorArt** — Drawing with math, one cursor movement at a time.
+**CursorArt** — drawing with mathematics using the mouse cursor.
 
 </div>
