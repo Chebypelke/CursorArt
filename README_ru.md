@@ -2,7 +2,7 @@
 
 ![License](https://img.shields.io/github/license/Chebypelke/CursorArt)
 ![C++](https://img.shields.io/badge/C%2B%2B-11%2B-blue)
-![PlatformIO](https://img.shields.io/badge/PlatformIO-Compatible-orange)
+[![PlatformIO Registry](https://badges.registry.platformio.org/packages/chebypelke/library/CursorArt.svg)](https://registry.platformio.org/libraries/chebypelke/CursorArt)
 ![Stars](https://img.shields.io/github/stars/Chebypelke/CursorArt)
 
 🇷🇺 Русский | [🇺🇸 English](README.md)
