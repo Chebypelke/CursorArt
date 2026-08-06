@@ -6,3 +6,4 @@ test/
 .vscode/launch.json
 .vscode/ipch/
 compile_commands.json
+src/main.cpp
